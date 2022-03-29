@@ -1,0 +1,17 @@
+.d-flex {
+    display: flex;
+    flex-direction: column;
+}
+.d-row {
+    flex-direction: row;
+}
+
+.align-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.full-view {
+    width: 100vw;
+    height: 100vh;
+}
