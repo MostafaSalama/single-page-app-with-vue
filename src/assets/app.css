@@ -1,3 +1,7 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 .d-flex {
     display: flex;
     flex-direction: column;
@@ -12,6 +16,31 @@
 }
 
 .full-view {
-    width: 100vw;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+body {
+    margin:40px;
+}
+* {
+    box-sizing: border-box;
+}
+input {
+    display:block;
+    width:100%;
+    margin:10px 0;
+    padding:10px;
+    border-radius:10px;
+    border: 1px solid #eee;
+    transition: .3s border-color;
+    box-shadow:0 0 4px rgba(0,0,0,0.3);
+
+}
+input:hover {
+    border: 1px solid #aaa;
 }

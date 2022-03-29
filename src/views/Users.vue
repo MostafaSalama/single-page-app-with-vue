@@ -11,9 +11,9 @@ export default {
   beforeRouteEnter: ((to, from, next) => {
     const isAuthenticated = localStorage.getItem('user');
     if (!isAuthenticated) {
-      console.log('yes no');
-      return next('/login')
+      return next('/login');
     }
+    return next();
   }),
 }
 </script>

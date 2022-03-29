@@ -34,9 +34,20 @@ export default {
     },
 
     onSignIn() {
-      console.log(this.user);
-      console.log(this.password);
+      if (this.user === this.$store.state.correctUsername &&
+          this.password === this.$store.state.correctPassword) {
+        localStorage.setItem('user', this.user);
+        this.$router.push('/users');
+      }
     }
+  },
+
+  beforeRouteEnter: (to, from, next) => {
+    const isAuthenticated = localStorage.getItem('user');
+    if (isAuthenticated) {
+      return next('/users');
+    }
+    return next();
   }
 }
 </script>

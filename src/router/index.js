@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Users from '../views/Users.vue';
 import Login from '../views/Login.vue';
-import users from '@/views/Users';
 
 
 Vue.use(VueRouter)
@@ -26,7 +25,7 @@ const routes = [
   },
 
   // any path redirect to users page
-  { path: '/:pathMatch(.*)*', component: users },
+  { path: '/:pathMatch(.*)*', redirect: '/users' },
 
 ]
 
