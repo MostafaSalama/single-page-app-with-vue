@@ -27,7 +27,7 @@ export default new Vuex.Store({
      * @param commit
      */
     getUsers({commit}) {
-      fetch(`${process.env.VUE_APP_API_URL || 'https://warm-sands-62073.herokuapp.com/'}${USERS_ENDPOINT}`)
+      fetch(`${process.env.VUE_APP_API_URL || 'https://warm-sands-62073.herokuapp.com'}${USERS_ENDPOINT}`)
         .then(res=> res.json())
         .then(users=> {
           commit('setUsers', users);
