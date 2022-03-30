@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex align-center full-view">
-    <div class="d-flex align-center">
+    <div class="d-flex align-center" @keyup.enter="onSignIn">
       <h1>SIGN INTO YOUR ACCOUNT</h1>
       <Input type="email" @change="onUserNameChange" />
       <Input type="password" @change="onUserPasswordChange" />
