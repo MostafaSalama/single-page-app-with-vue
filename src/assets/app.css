@@ -2,6 +2,19 @@
     box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
 .d-flex {
     display: flex;
     flex-direction: column;
@@ -23,7 +36,10 @@
     text-align: center;
     min-height: 100vh;
 }
-
+img {
+    max-height: 400px;
+    border-radius: 4px;
+}
 body {
     margin:40px;
 }
