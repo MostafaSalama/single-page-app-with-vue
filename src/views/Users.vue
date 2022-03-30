@@ -56,7 +56,6 @@ export default {
 
 <style scoped>
 .user-cards-container {
-  position: relative;
   left: 0;
   right: 0;
   margin: auto;
