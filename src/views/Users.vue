@@ -1,5 +1,5 @@
 <template>
-  <div class="container" @click="closeModal">
+  <div class="container" @click.stop.prevent="closeModal">
     <sidebar/>
     <div class="user-cards-container">
       <UserCard v-for="user in users" :user="user" :key="user.id" @setCurrentUser="setCurrentUser"/>

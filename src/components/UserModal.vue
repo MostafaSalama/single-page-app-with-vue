@@ -14,9 +14,9 @@
               {{user.name}}
             </div>
           </div>
-          <div class="user-text_info">
+          <div class="user-text_info user-email-content" @click.stop="sendEmail">
             <div class="icon">
-              <img class="image-icon" src="../assets/user-svgrepo-com.svg">
+              <img class="image-icon" src="../assets/email-svgrepo-com.svg">
             </div>
             <div class="text">
               {{user.email}}
@@ -24,7 +24,7 @@
           </div>
           <div class="user-text_info">
             <div class="icon">
-              <img class="image-icon" src="../assets/user-svgrepo-com.svg">
+              <img class="image-icon" src="../assets/call-svgrepo-com.svg">
             </div>
             <div class="text">
               {{user.phone}}
@@ -32,7 +32,7 @@
           </div>
           <div class="user-text_info">
             <div class="icon">
-              <img class="image-icon" src="../assets/user-svgrepo-com.svg">
+              <img class="image-icon" src="../assets/home-svgrepo-com.svg">
             </div>
             <div class="text">
               {{user.address.city}}, {{user.address.street}}
@@ -40,7 +40,7 @@
           </div>
           <div class="user-text_info">
             <div class="icon">
-              <img class="image-icon" src="../assets/user-svgrepo-com.svg">
+              <img class="image-icon" src="../assets/location-svgrepo-com.svg">
             </div>
             <div class="text">
               {{user.website}}
@@ -63,6 +63,17 @@ export default {
     return {
     }
   },
+  methods:{
+    sendEmail(){
+      console.log('sending');
+      window.location.href = `mailto:${this.user.email}?subject=We are hiring!&body=
+      Hello, ${this.user.name}. We’d like to propose you an offer.
+
+      `;
+
+    }
+  },
+
   props: {
     user: Object,
     showModal: Boolean
@@ -135,5 +146,9 @@ export default {
 .image-icon {
   width: 20px;
   height: 20px;
+}
+
+.user-email-content {
+  cursor: pointer;
 }
 </style>
