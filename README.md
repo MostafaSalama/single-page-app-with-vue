@@ -1,6 +1,16 @@
 # single-page-app-with-vue
 
 A simple vuejs single page app 
+
+API
+
+https://warm-sands-62073.herokuapp.com/api/users
+
+UI 
+
+https://pure-crag-54864.herokuapp.com/users
+
+
 ## Routers 
 
 `/login` to login in with creds `admin` `1234` 
